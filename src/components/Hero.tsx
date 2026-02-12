@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Shield, Layout, Server, Database, Code, Terminal, Lock } from 'lucide-react';
+import { Shield, Layout, Server, Database, Terminal } from 'lucide-react';
 
 const Hero: React.FC = () => {
     return (
