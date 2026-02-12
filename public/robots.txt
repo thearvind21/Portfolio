@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://arvindsitarampadyachi.com/sitemap.xml
