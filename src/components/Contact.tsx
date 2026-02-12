@@ -84,13 +84,13 @@ const Contact: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-
+                        {/* 
                         <div className="resume-download">
                             <a href="/resume.pdf" className="btn btn-primary" download>
                                 <Download size={18} style={{ marginRight: '8px' }} />
                                 Download Resume
                             </a>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="contact-form-container glass-card">
