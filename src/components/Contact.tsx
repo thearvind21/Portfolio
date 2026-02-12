@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Linkedin, Github, Download, Send, CheckCircle, AlertCircle, MapPin } from 'lucide-react';
+import { Linkedin, Github, Send, CheckCircle, AlertCircle, MapPin } from 'lucide-react';
 
 const Contact: React.FC = () => {
     const [formData, setFormData] = useState({
