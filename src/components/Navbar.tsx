@@ -115,7 +115,7 @@ const Navbar: React.FC = () => {
                     cursor: pointer;
                 }
 
-                @media (max-width: 768px) {
+                @media (max-width: 968px) {
                     .menu-btn {
                         display: block;
                     }
