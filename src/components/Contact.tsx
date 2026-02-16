@@ -72,15 +72,15 @@ const Contact: React.FC = () => {
 
                             </a> */}
                             <div className="location-globe-widget">
-                                <a href="https://www.google.com/maps/place/Vadodara,+Gujarat" target="_blank" rel="noopener noreferrer" className="globe-visual">
-                                    <div className="location-pin-point" title="Vadodara, India">
+                                <a href="https://www.google.com/maps/place/Mumbai,+Maharashtra" target="_blank" rel="noopener noreferrer" className="globe-visual">
+                                    <div className="location-pin-point" title="Mumbai, India">
                                         <div className="pin-pulse"></div>
                                         <div className="pin-center"></div>
                                     </div>
                                 </a>
                                 <div className="location-details">
                                     <MapPin size={18} className="map-pin-icon" />
-                                    <span>Vadodara, India</span>
+                                    <span>Mumbai, India</span>
                                 </div>
                             </div>
                         </div>
@@ -420,6 +420,25 @@ const Contact: React.FC = () => {
 
                     .footer-socials {
                         justify-content: center;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .contact-form-container {
+                        padding: 1.5rem;
+                    }
+
+                    .contact-description {
+                        font-size: 0.95rem;
+                    }
+
+                    .globe-visual {
+                        width: 120px;
+                        height: 120px;
+                    }
+
+                    .contact-form h3 {
+                        font-size: 1.25rem;
                     }
                 }
             `}</style>

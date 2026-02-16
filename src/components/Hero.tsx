@@ -24,25 +24,26 @@ const Hero: React.FC = () => {
                     </div>
 
                     <div className="hero-visual">
+                        <p className="core-stack-label">Core Stack</p>
                         <div className="tech-badge-container">
                             <div className="tech-badge python">
-                                <Terminal size={24} />
+                                <Terminal size={18} />
                                 <span>Python</span>
                             </div>
                             <div className="tech-badge django">
-                                <Server size={24} />
+                                <Server size={18} />
                                 <span>Django</span>
                             </div>
                             <div className="tech-badge security">
-                                <Shield size={24} />
+                                <Shield size={18} />
                                 <span>Find Vulnerabilities</span>
                             </div>
                             <div className="tech-badge react">
-                                <Layout size={24} />
+                                <Layout size={18} />
                                 <span>React</span>
                             </div>
                             <div className="tech-badge db">
-                                <Database size={24} />
+                                <Database size={18} />
                                 <span>SQL</span>
                             </div>
                         </div>
@@ -97,6 +98,18 @@ const Hero: React.FC = () => {
                     display: flex;
                     gap: 1rem;
                     flex-wrap: wrap;
+                }
+
+                /* Core Stack Label - hidden on desktop, shown on mobile */
+                .core-stack-label {
+                    display: none;
+                    font-size: 0.65rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.2em;
+                    color: rgba(148, 163, 184, 0.5);
+                    margin-bottom: 1rem;
+                    text-align: center;
                 }
 
                 .btn {
@@ -218,7 +231,23 @@ const Hero: React.FC = () => {
                     50% { transform: translateY(-20px); }
                 }
 
+                @keyframes badgeFadeIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(15px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+
                 @media (max-width: 968px) {
+                    .hero-section {
+                        padding-top: 6rem;
+                        padding-bottom: 3rem;
+                    }
+
                     .hero-content {
                         grid-template-columns: 1fr;
                         text-align: center;
@@ -227,20 +256,69 @@ const Hero: React.FC = () => {
                     .hero-headline {
                         font-size: 2.5rem;
                     }
+
+                    .hero-description {
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-bottom: 2rem;
+                    }
                     
                     .cta-group {
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                        max-width: 320px;
+                        margin: 0 auto;
+                        gap: 0.75rem;
+                    }
+
+                    .btn {
+                        width: 100%;
+                        padding: 0.9rem 1.5rem;
+                        border-radius: 9999px;
+                        font-size: 0.95rem;
                         justify-content: center;
+                    }
+
+                    .btn-primary {
+                        box-shadow: 0 4px 20px rgba(56, 189, 248, 0.25);
                     }
                     
                     .tech-badge {
                         position: static;
                         display: inline-flex;
-                        margin: 0.5rem;
-                        animation: none;
+                        margin: 0;
+                        border-radius: 9999px;
+                        background: rgba(255, 255, 255, 0.03);
+                        border: 1px solid rgba(255, 255, 255, 0.08);
+                        backdrop-filter: blur(12px);
+                        padding: 0.6rem 1.1rem;
+                        font-size: 0.9rem;
+                        box-shadow: none;
+                        animation: badgeFadeIn 0.6s ease forwards;
+                        opacity: 0;
                     }
+
+                    .tech-badge svg {
+                        width: 16px;
+                        height: 16px;
+                    }
+
+                    .tech-badge.python { animation-delay: 0.1s; }
+                    .tech-badge.django { animation-delay: 0.2s; }
+                    .tech-badge.security { animation-delay: 0.3s; }
+                    .tech-badge.react { animation-delay: 0.4s; }
+                    .tech-badge.db { animation-delay: 0.5s; transform: scale(1); }
                     
                     .hero-visual {
                         height: auto;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-top: 2.5rem;
+                    }
+
+                    .core-stack-label {
                         display: block;
                     }
                     
@@ -248,11 +326,69 @@ const Hero: React.FC = () => {
                         display: flex;
                         flex-wrap: wrap;
                         justify-content: center;
-                        gap: 1rem;
+                        gap: 0.75rem;
                     }
                     
                     .cyber-circle {
                         display: none;
+                    }
+
+                    .role-badge {
+                        font-size: 0.7rem;
+                        padding: 0.4rem 1rem;
+                        border-radius: 9999px;
+                        border: 1px solid rgba(56, 189, 248, 0.25);
+                        background: rgba(56, 189, 248, 0.05);
+                        display: inline-block;
+                        margin-bottom: 1.25rem;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .hero-section {
+                        padding-top: 5rem;
+                        min-height: auto;
+                    }
+
+                    .hero-headline {
+                        font-size: 2rem;
+                        line-height: 1.15;
+                        margin-bottom: 1rem;
+                    }
+
+                    .hero-description {
+                        font-size: 0.9rem;
+                        max-width: 300px;
+                        margin-bottom: 1.75rem;
+                    }
+
+                    .cta-group {
+                        max-width: 280px;
+                        gap: 0.65rem;
+                    }
+
+                    .btn {
+                        padding: 0.8rem 1.25rem;
+                        font-size: 0.875rem;
+                    }
+
+                    .role-badge {
+                        font-size: 0.6rem;
+                        letter-spacing: 0.15em;
+                    }
+
+                    .tech-badge-container {
+                        gap: 0.6rem;
+                    }
+
+                    .tech-badge {
+                        padding: 0.5rem 0.9rem;
+                        font-size: 0.8rem;
+                        gap: 0.5rem;
+                    }
+
+                    .hero-visual {
+                        margin-top: 2rem;
                     }
                 }
             `}</style>

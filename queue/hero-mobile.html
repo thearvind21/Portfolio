@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=390, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3abff8",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0F172A",
+                        "slate-custom": "#1E293B",
+                        "muted-grey": "#94A3B8"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A;
+            color: #ffffff;
+            width: 390px;
+            margin: 0 auto;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #3abff8, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-glow {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(58, 191, 248, 0.15) 0%, rgba(58, 191, 248, 0) 70%);
+            filter: blur(40px);
+            z-index: -1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased">
+<!-- Decorative Glows -->
+<div class="bg-glow top-20 -left-20"></div>
+<div class="bg-glow bottom-40 -right-20 opacity-50"></div>
+<!-- Header / Navbar -->
+<header class="sticky top-0 z-50 px-6 py-5 flex items-center justify-between backdrop-blur-md bg-background-dark/80">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center border border-primary/30">
+<span class="material-icons-round text-primary text-xl">security</span>
+</div>
+<span class="text-xl font-bold tracking-tight">AP</span>
+</div>
+<button class="w-10 h-10 glass rounded-full flex items-center justify-center">
+<span class="material-icons-round text-white">menu</span>
+</button>
+</header>
+<main class="px-6 pt-8 pb-20 flex flex-col items-center text-center">
+<!-- Badge -->
+<div class="mb-6 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5">
+<span class="text-[10px] font-extrabold tracking-[0.15em] text-primary uppercase">
+                Python + Full Stack Dev + Cyber Security
+            </span>
+</div>
+<!-- Headline -->
+<h1 class="text-4xl font-extrabold leading-tight tracking-tight mb-6">
+            Building 
+            <span class="text-gradient">Secure &amp; Intelligent</span> 
+            Digital Systems
+        </h1>
+<!-- Subtitle -->
+<p class="text-muted-grey text-base leading-relaxed mb-10 max-w-[320px]">
+            Crafting robust full-stack applications with a security-first mindset and scalable, AI-ready architecture.
+        </p>
+<!-- CTA Stack -->
+<div class="flex flex-col w-full gap-4 mb-16">
+<!-- Primary CTA -->
+<button class="w-full py-4 bg-gradient-to-r from-primary to-[#a855f7] rounded-full font-bold text-white shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+                View Projects
+            </button>
+<!-- Secondary CTA (Glass) -->
+<button class="w-full py-4 glass rounded-full font-semibold text-white active:scale-95 transition-transform flex items-center justify-center gap-2">
+<span class="material-icons-round text-sm">alternate_email</span>
+                Contact Me
+            </button>
+<!-- Outline CTA -->
+<button class="w-full py-4 border-2 border-primary/40 rounded-full font-semibold text-primary active:scale-95 transition-transform flex items-center justify-center gap-2">
+<span class="material-icons-round text-sm">file_download</span>
+                Download Resume
+            </button>
+</div>
+<!-- Tech Stack Badges -->
+<div class="w-full">
+<p class="text-[11px] font-bold text-muted-grey/60 uppercase tracking-widest mb-6">Core Stack</p>
+<div class="flex flex-wrap justify-center gap-3">
+<div class="glass px-4 py-2.5 rounded-full flex items-center gap-2">
+<img class="w-4 h-4" data-alt="Official Python logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt7IXQHweGHt6nXEIfCr2-YkF3_JuQLiV2itVNQd_OM0laeckSp-CG5sL9ofmMf7QEzDQNiNw0QiDKPzIo9Qi7BDX5oeyj3htCFSOGKVvCw120OjxB7HEH35pboDCLdTBkZdL_MSJ-1NPvMSFfwLcvFYlPIH-nZPhztfhJVXFWbTNyHaCtLkUTNJBMgNMFUof2hXK3mD3wCAoEj_v_5wht2XRA7PEBQy-0HHH8arxHwXqmySJo688sEM0Cg2EkofvVGmelNaNkU0M"/>
+<span class="text-sm font-medium">Python</span>
+</div>
+<div class="glass px-4 py-2.5 rounded-full flex items-center gap-2">
+<img class="w-4 h-4 opacity-80" data-alt="Official Django framework logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyEk2GyuDr7My6P-tY7D72ZZZUaR3eMgJcg_kiknh9duH4JjmuQssxKA-zDD6GPPvt4iX3ZMUwlWxO0ldkQk19rZqFWQ2iE-4g9zbCdnOiECoaebEoH3RO43THBhCUp4zuFgApu2x38_pQRNrgd5MBijEQVvB84yk3_N8ofSOqGKEUYdATQJzJH66JR1lHzVy5zjYQzQP9CdqMqr-pcQwplvvk-Z_moBNoafyFqC4UKpkCy0ybwV4oV66NqPKLRt6j-L1PfdiSKJ4"/>
+<span class="text-sm font-medium">Django</span>
+</div>
+<div class="glass px-4 py-2.5 rounded-full flex items-center gap-2">
+<img class="w-4 h-4" data-alt="Official React library logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc2V9p88S6PGIva7dvVdUdpdDNcRSCeMjPGIOWRKr-MNIbNXNqicJV-wHY7J2n2oAa4uoidPuOWXwNYuMRX4q_CXkKf2N44Hj4b9tAHZlUBsWYu0LjtT4RLqyyePkIMRNGlNULx4-hhU9byovs4s2OUZt-TWi-nQpLi3eY0k0gHCyEUGQWBJfcL8tDWkvOobrwkk9Xce4XnDTZ-l0pgGlEU4yd_PloQmkPF0y_e7n-qZa9cL67JWkOGpHTPlIG7T72H-GPt5BKh04"/>
+<span class="text-sm font-medium">React</span>
+</div>
+<div class="glass px-4 py-2.5 rounded-full flex items-center gap-2">
+<span class="material-icons-round text-primary text-[16px]">storage</span>
+<span class="text-sm font-medium">PostgreSQL</span>
+</div>
+<div class="glass px-4 py-2.5 rounded-full flex items-center gap-2">
+<span class="material-icons-round text-primary text-[16px]">terminal</span>
+<span class="text-sm font-medium">Docker</span>
+</div>
+<div class="glass px-4 py-2.5 rounded-full flex items-center gap-2">
+<span class="material-icons-round text-primary text-[16px]">vpn_lock</span>
+<span class="text-sm font-medium">OAuth2</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Visual Footer Accent -->
+<div class="fixed bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary/0 via-primary/40 to-primary/0 opacity-50"></div>
+</body></html>

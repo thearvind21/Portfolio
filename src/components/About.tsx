@@ -195,6 +195,27 @@ const About: React.FC = () => {
                     .achievements {
                         flex-direction: column;
                     }
+                    .section-header {
+                        margin-bottom: 2.5rem;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .code-window {
+                        font-size: 0.75rem;
+                    }
+                    .window-body {
+                        padding: 1rem;
+                    }
+                    .highlight-text {
+                        font-size: 1.05rem;
+                    }
+                    .about-text p {
+                        font-size: 0.9rem;
+                    }
+                    .achievement-card {
+                        padding: 0.75rem;
+                    }
                 }
             `}</style>
         </section>

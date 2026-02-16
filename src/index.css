@@ -30,6 +30,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg-primary);
@@ -37,6 +41,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -88,7 +93,6 @@ button {
 .glass-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 40px rgba(56, 189, 248, 0.15);
-  /* glowing effect */
   border-color: rgba(56, 189, 248, 0.3);
 }
 
@@ -118,7 +122,7 @@ button {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -157,7 +161,7 @@ button {
   }
 
   .container {
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
   }
 
   .section-title {
@@ -167,13 +171,22 @@ button {
   .section-subtitle {
     font-size: 1rem;
   }
+}
 
-  h1 {
-    font-size: 2.5rem !important;
+@media (max-width: 480px) {
+  .section {
+    padding: 2.5rem 0;
   }
 
-  /* Force Hero headline smaller if needed */
-  h2 {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section-title {
     font-size: 1.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
   }
 }
